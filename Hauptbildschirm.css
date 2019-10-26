@@ -23,3 +23,8 @@ button {
     border-image: initial;
     width: 197px;
 }
+
+div {
+    background-image: url("Map2.png");
+    background-color: white;
+}
