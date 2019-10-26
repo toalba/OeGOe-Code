@@ -19,16 +19,20 @@ function do_something(latitude,longitude){
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(mymap);
   var marker = L.marker([latitude,longitude]).addTo(mymap);
 
-  var opl = new L.OverPassLayer({
+  mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["bus"="yes"]({{bbox}});out body;>;out skel qt;','Pins/BusseroterPin.png'));
+  mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;','Pins/StrassenbahnorangerPin.png'));
+}
+function createoverpasslayer(query,iconUrl){
+  return new L.OverPassLayer({
     minZoom: 13,
-     endPoint: 'https://overpass-api.de/api/',
+     endPoint: 'https://lz4.overpass-api.de/api/',
      //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
-     query: 'node["public_transport"="stop_position"]({{bbox}});out body;>;out skel qt;',
+     query: query,
+     loadedBounds: [],
+     markerIcon: L.icon({
+      iconUrl: iconUrl,
+      iconSize: [30,30],
+    }),
 
   });
-  
-  mymap.addLayer(opl);
-
 }
-
-
