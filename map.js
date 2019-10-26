@@ -18,8 +18,8 @@ function do_something(latitude,longitude){
   mymap.setView([latitude,longitude], 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(mymap);
   var stblatt = L.icon({
-    iconUrl: 'Pins/StandortBlattPin.png',
-    iconSize: [30, 46.75],
+    iconUrl: 'Pins/greenleavest.png',
+    iconSize: [30, 93.3],
 });
   
   var marker = L.marker([latitude,longitude],{icon: stblatt}).addTo(mymap);
