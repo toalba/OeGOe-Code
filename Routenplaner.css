@@ -65,3 +65,19 @@ input[type="button" i] {
     border-color: white;
     border-image: initial;
 }
+input[type="button" i] {
+    -webkit-appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: white;
+    background-color: mediumseagreen;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: white;
+    border-image: initial;
+}
