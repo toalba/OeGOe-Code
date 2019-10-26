@@ -6,6 +6,7 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    color: seagreen;
 }
 h1 {
     display: block;
@@ -15,6 +16,7 @@ h1 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    color: mediumseagreen;
 }
 fieldset {
     display: block;
@@ -27,7 +29,25 @@ fieldset {
     padding-block-end: 0.625em;
     min-inline-size: min-content;
     border-width: 2px;
-    border-style: groove;
-    border-color: threedface;
+    border-style: solid;
+    border: 2px solid mediumseagreen;
+    border-radius: 5px;
+    border-color: mediumseagreen;
+    border-image: initial;
+}
+input[type="button" i] {
+    -webkit-appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: white;
+    background-color: mediumseagreen;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: white;
     border-image: initial;
 }
