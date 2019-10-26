@@ -21,11 +21,17 @@ function do_something(latitude,longitude){
     iconUrl: 'Pins/greenleavest.png',
     iconSize: [30, 93.3],
 });
+  var Fahradgrün = L.icon({
+    iconUrl: 'Pins/Fahreadgrün.png',
+    iconSize: [30,30],
+  });
   
   var marker = L.marker([latitude,longitude],{icon: stblatt}).addTo(mymap);
+  var fahradverllinz = L.marker([14.290217,48.306973], {icon: Fahrradgrün})
 
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["bus"="yes"]({{bbox}});out body;>;out skel qt;','Pins/BusseroterPin.png',latitude,longitude));
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;','Pins/StrassenbahnorangerPin.png',latitude,longitude));
+  mymap.addLayer(createoverpasslayer('node["railway"="station"]({{bbox}});out body;>;out skel qt;','Pins/ZugmagentaPin.png',latitude,longitude))
 }
 function createoverpasslayer(query,iconUrl,latitude,longitude){
   return new L.OverPassLayer({
