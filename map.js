@@ -28,10 +28,10 @@ function createoverpasslayer(query,iconUrl){
      endPoint: 'https://lz4.overpass-api.de/api/',
      //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
      query: query,
+     loadedBounds: [],
      markerIcon: L.icon({
       iconUrl: iconUrl,
-      iconSize: [20,58.2],
-      iconAnchor: [-10,10],
+      iconSize: [30,30],
     }),
 
   });
