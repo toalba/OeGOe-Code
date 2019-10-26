@@ -2,6 +2,12 @@
 <html>
     <head>
     <meta charset="UTF-8">
+
+    <title>ÖGÖ - Hauptbildschirm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Hauptbildschirm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/>
@@ -13,8 +19,20 @@
     <script src="overpass-lib.js"></script>
     <script src="map.js"></script>
     </head>
+    <nav>
+        <div class="container">
+                <P>
+                <a href="Filter.html"><button type="button" class="btn btn-default btn-sm">
+                <p><i class="fa fa-sliders" style="font-size:20px"></i> Filter</p> 
+                </button></a>
+                <a href="Routenplaner.html"><button type="button" class="btn btn-default btn-sm">
+                <p>Routenplaner <i class="fa fa-map-signs" style="font-size:18px"></i></p>
+                </button></a>
+                </P>
+            </div>
+        </nav>
     <body>
-        <div id="mapid">
+        <div class="map" id="mapid">
 
         </div>  
     </body>
