@@ -1,8 +1,7 @@
 fieldset {
     display: block;
-    width: 20%;
-    margin-inline-start: 2px;
-    margin-inline-end: 2px;
+    margin-inline-start: 3%;
+    margin-inline-end: 3%;
     padding-block-start: 0.35em;
     padding-inline-start: 0.75em;
     padding-inline-end: 0.75em;
@@ -40,4 +39,5 @@ input[type="button" i] {
     border-style: outset;
     border-color: white;
     border-image: initial;
+    margin-inline-start: 3%;
 }
