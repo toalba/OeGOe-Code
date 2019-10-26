@@ -21,10 +21,10 @@ function do_something(latitude,longitude){
 
   var opl = new L.OverPassLayer({
 
-    'query': '(node({{bbox}})[organic];node({{bbox}})[second_hand];);out qt;',
+    'query': '(node["public_transport"="stop_position"]["tram"="yes"];);out body;;out skel qt;',
   });
   
-  map.addLayer(mymap);
+  mymap.addLayer(opl);
 
 }
 
