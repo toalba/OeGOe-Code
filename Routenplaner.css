@@ -13,3 +13,8 @@ fieldset {
     border-color: threedface;
     border-image: initial;
 }
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
