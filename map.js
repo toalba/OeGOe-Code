@@ -25,9 +25,20 @@ function do_something(latitude,longitude){
     iconUrl: 'Pins/Fahrradgrün.png',
     iconSize: [30,30],
   });
+  function fahrradmarker(latcords,longcords){
+    L.marker([latcords,longcords], {icon: Fahrradgrün}).addTo(mymap);
+  };
   
   var marker = L.marker([latitude,longitude],{icon: stblatt}).addTo(mymap);
-  var fahradverllinz = L.marker([48.306973,14.290217], {icon: Fahrradgrün}).addTo(mymap);
+  fahrradmarker(48.306973, 14.290217);
+  fahrradmarker(48.3121050,14.2994222);
+  fahrradmarker(48.306679,14.289829);
+  fahrradmarker(48.304744,14.284498);
+  fahrradmarker(48.298114,14.299541);
+  fahrradmarker(48.309656,14.278211);
+  fahrradmarker(48.297160,14.283785);
+  fahrradmarker(48.305021,14.290711);
+
 
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["bus"="yes"]({{bbox}});out body;>;out skel qt;','Pins/BusseroterPin.png',latitude,longitude));
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;','Pins/StrassenbahnorangerPin.png',latitude,longitude));
