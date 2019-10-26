@@ -31,9 +31,7 @@ function createoverpasslayer(query,iconUrl,latitude,longitude){
   return new L.OverPassLayer({
     minZoom: 13,
      endPoint: 'https://lz4.overpass-api.de/api/',
-     //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
      query: query,
-     //loadedBounds: [latitude+0.5,longitude+0.5][latitude-0.5,longitude-0.5],
      markerIcon: L.icon({
       iconUrl: iconUrl,
       iconSize: [30,30],
