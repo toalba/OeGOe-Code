@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ÖGÖ - Routenplaner</title>
+    </head>
+
+<body>
+
+<h1>Routenplaner</h1>
+
+<form action="/action_page.php">
+    <fieldset>
+        <legend>Route</legend>
+    Start<br>
+    <input type="text" name="start">
+    <br>
+    Ziel<br>
+    <input type="text" name="ziel">
+    <br>
+    </fieldset>
+  <br>
+    <fieldset>         
+        <legend>Zeiten</legend>
+            <form>
+                <input type="checkbox" name="Abfahrt" value="Abfahrt"> Abfahrt
+                <input type="checkbox" name="Ankunft" value="Anunft"> Ankunft  
+            </form>
+            <br> <br>
+    Uhrzeit<br>
+    <input type="time" name="uhrzeit">
+    <br>
+    Datum<br>
+    <input type="date" name="datum">
+        <br>
+    </fieldset>
+<br>
+  <fieldset>
+        <form>
+                <input type="checkbox" name="Fußweg" value="Fußweg"> Fußweg
+        </form>
+  </fieldset>  
+  <br> 
+  <input type="button" value="Bestätigen">
+</form>
+
+</body>
+</html>
