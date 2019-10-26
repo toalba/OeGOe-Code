@@ -1,25 +1,53 @@
-button {
-    -webkit-appearance: button;
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: white;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    background-color: mediumseagreen;
-    box-sizing: border-box;
-    margin: 0em;
-    font: 400 20px Arial;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: white;
-    border-image: initial;
-    width: 37%;
+.button {
+  margin: 10px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color:
+  white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px
+  #eee;
+  border-radius: 10px;
+  display: block;
+  backround-size: 200% auto;
+  background-image: linear-gradient(to right,
+  mediumseagreen 0%, #61cc3b 51%,
+  mediumseagreen 100%);
+  border: 0;
+  min-width: 300px;
+  font-size: 22px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button:hover {
+   background-position: right center;
+}
+
+.map {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 87;
+  display: flex;
+  justify-content: center;
 }
