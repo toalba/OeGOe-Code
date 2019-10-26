@@ -15,10 +15,11 @@ button {
     background-color: green;
     box-sizing: border-box;
     margin: 0em;
-    font: 400 25px Arial;
+    font: 400 20px Arial;
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
     border-color: white;
     border-image: initial;
+    width: 175px;
 }
