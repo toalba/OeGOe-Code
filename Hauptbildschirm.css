@@ -19,6 +19,6 @@ button {
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
-    border-color: buttonface;
+    border-color: white;
     border-image: initial;
 }
