@@ -1,0 +1,31 @@
+#container { 
+    height: 100%; 
+    background-color: rgb(32, 206, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+html,body{
+  height: 100%;
+  margin: 0;
+}
+
+img{
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+    display: inline-block;
+    animation-name: hopping;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hopping {
+    0% {top: 300px;}
+    25% {top: 250px;}
+    50% {top: 300px;}
+    75% {top: 250px;}
+    100% {top: 300px;}
+  }
