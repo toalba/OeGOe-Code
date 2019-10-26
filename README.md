@@ -1,4 +1,4 @@
-# OeGOe-Code
+# ÖGÖ - Code
 <h2> Österreichische Grüne Öffis</h2>
 <h5> Weltweit Nutzbar</h5>
 App-Data / HTML Code for Web-Map with Jugendhackt
