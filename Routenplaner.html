@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="Routenplaner.css">
         <meta charset="UTF-8">
         <title>ÖGÖ - Routenplaner</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
 <body>
@@ -13,7 +15,7 @@
 
 <form action="/action_page.php">
     <fieldset>
-        <legend>Route</legend>
+        <legend><strong>Route</strong></legend>
     Start<br>
     <input type="text" name="start">
     <br>
@@ -23,16 +25,16 @@
     </fieldset>
   <br>
     <fieldset>         
-        <legend>Zeiten</legend>
+        <legend><strong>Zeiten</strong></legend>
             <form>
                 <input type="checkbox" name="Abfahrt" value="Abfahrt"> Abfahrt
                 <input type="checkbox" name="Ankunft" value="Anunft"> Ankunft  
             </form>
             <br> <br>
-    Uhrzeit<br>
+    <i class="fa fa-clock-o" style="font-size:22px"></i>
     <input type="time" name="uhrzeit">
-    <br>
-    Datum<br>
+    <br> <br>
+    <i class="fa fa-calendar" style="font-size:20px"></i> 
     <input type="date" name="datum">
         <br>
     </fieldset>
@@ -44,7 +46,8 @@
         </form>
   </fieldset>  
   <br> 
-  <input type="button" value="Bestätigen">
+  <a href="index.html"><input type="button" value="Bestätigen"></a>
+  <a href="index.html"><input type="button" value="Zurück"></a>
 </form>
 
 </body>

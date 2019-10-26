@@ -17,18 +17,25 @@ window.addEventListener("DOMContentLoaded",function(){
 function do_something(latitude,longitude){
   mymap.setView([latitude,longitude], 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(mymap);
-  var marker = L.marker([latitude,longitude]).addTo(mymap);
+  var stblatt = L.icon({
+    iconUrl: 'Pins/greenleavest.png',
+    iconSize: [30, 93.3],
+});
+  
+  var marker = L.marker([latitude,longitude],{icon: stblatt}).addTo(mymap);
 
-  var opl = new L.OverPassLayer({
+  mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["bus"="yes"]({{bbox}});out body;>;out skel qt;','Pins/BusseroterPin.png',latitude,longitude));
+  mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;','Pins/StrassenbahnorangerPin.png',latitude,longitude));
+}
+function createoverpasslayer(query,iconUrl,latitude,longitude){
+  return new L.OverPassLayer({
     minZoom: 13,
-     endPoint: 'https://overpass-api.de/api/',
-     //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
-     query: 'node["public_transport"="stop_position"]({{bbox}});out body;>;out skel qt;',
+     endPoint: 'https://lz4.overpass-api.de/api/',
+     query: query,
+     markerIcon: L.icon({
+      iconUrl: iconUrl,
+      iconSize: [30,30],
+    }),
 
   });
-  
-  mymap.addLayer(opl);
-
 }
-
-
