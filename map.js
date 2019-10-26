@@ -20,8 +20,8 @@ function do_something(latitude,longitude){
   var marker = L.marker([latitude,longitude]).addTo(mymap);
 
   var opl = new L.OverPassLayer({
-
-    'query': '(node["public_transport"="stop_position"]["tram"="yes"];);out body;;out skel qt;',
+     endPoint: 'https://overpass-api.de/api/',
+    'query': 'node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;',
   });
   
   mymap.addLayer(opl);
