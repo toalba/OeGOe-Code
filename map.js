@@ -22,6 +22,7 @@ function do_something(latitude,longitude){
   var opl = new L.OverPassLayer({
     minZoom: 13,
      endPoint: 'https://overpass-api.de/api/',
+     //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
      query: 'node["public_transport"="stop_position"]({{bbox}});out body;>;out skel qt;',
 
   });
