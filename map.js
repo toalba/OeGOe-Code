@@ -34,20 +34,19 @@ function do_something(latitude,longitude){
   });
   var bus = new L.OverPassLayer({
     minZoom: 13,
-     endPoint: 'https://lz4.overpass-api.de/api/',
+     endPoint: 'https://lz4.overpass-a pi.de/api/',
      //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
      query: 'node["public_transport"="stop_position"]["bus"="yes"]({{bbox}});out body;>;out skel qt;',
      markerIcon: L.icon({
-      iconUrl: 'Pins/Busse - roter Pin.png',
+      iconUrl: 'Pins/BusseroterPin.png',
       iconSize: [45, 45],
       //iconAnchor: [0, 0],
-     
-      
     }),
     
   });
   mymap.addLayer(bus);
   mymap.addLayer(tram);
+
   
 
 }
