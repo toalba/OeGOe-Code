@@ -17,7 +17,12 @@ window.addEventListener("DOMContentLoaded",function(){
 function do_something(latitude,longitude){
   mymap.setView([latitude,longitude], 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(mymap);
-  var marker = L.marker([latitude,longitude]).addTo(mymap);
+  var stblatt = L.icon({
+    iconUrl: 'Pins/StandortBlattPin.png',
+    iconSize: [30, 46.75],
+});
+  
+  var marker = L.marker([latitude,longitude],{icon: stblatt}).addTo(mymap);
 
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["bus"="yes"]({{bbox}});out body;>;out skel qt;','Pins/BusseroterPin.png',latitude,longitude));
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;','Pins/StrassenbahnorangerPin.png',latitude,longitude));
