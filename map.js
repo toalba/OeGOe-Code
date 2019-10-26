@@ -19,15 +19,36 @@ function do_something(latitude,longitude){
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(mymap);
   var marker = L.marker([latitude,longitude]).addTo(mymap);
 
-  var opl = new L.OverPassLayer({
+  var tram = new L.OverPassLayer({
     minZoom: 13,
-     endPoint: 'https://overpass-api.de/api/',
+     endPoint: 'https://z.overpass-api.de/api/',
      //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
-     query: 'node["public_transport"="stop_position"]({{bbox}});out body;>;out skel qt;',
-
+     query: 'node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;',
+     markerIcon: L.icon({
+      iconUrl: 'Pins/StrassenbahnorangerPin.png',
+      iconSize: [45, 45],
+      //iconAnchor: [0, 0],
+      
+    }),
+    
   });
+  var bus = new L.OverPassLayer({
+    minZoom: 13,
+     endPoint: 'https://lz4.overpass-api.de/api/',
+     //query: 'way["route"="bicycle"]({{bbox}});out body;>;out skel qt;',
+     query: 'node["public_transport"="stop_position"]["bus"="yes"]({{bbox}});out body;>;out skel qt;',
+     markerIcon: L.icon({
+      iconUrl: 'Pins/Busse - roter Pin.png',
+      iconSize: [45, 45],
+      //iconAnchor: [0, 0],
+     
+      
+    }),
+    
+  });
+  mymap.addLayer(bus);
+  mymap.addLayer(tram);
   
-  mymap.addLayer(opl);
 
 }
 
