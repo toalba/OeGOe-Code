@@ -51,3 +51,11 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+.backtostandord {
+  position: fixed;
+  bottom: 3%;
+  left: 2%;
+  height: 10%;
+  width: 3%;
+}
