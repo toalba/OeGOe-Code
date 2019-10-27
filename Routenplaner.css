@@ -1,3 +1,18 @@
+#popuproute {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  align-items: center;;
+  justify-content: center;
+  top: calc(50% - 220px);
+  left: calc(50% - 700px);
+  background: white;
+  height: 48%;
+  width: 75%;
+  border-radius: 10px;
+  border-color: black;
+}
+
 fieldset {
     display: block;
     margin-inline-start: 3%;
