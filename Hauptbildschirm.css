@@ -20,7 +20,7 @@
   font-size: 22px;
 }
 .buttonstandort{
-background-image: url("Pins/leaf_BackToStandort.png"),;
+image: url("Pins/leaf_BackToStandort.png"),;
 display: block;
 margin-left: auto;
 margin-right: auto;
@@ -82,6 +82,8 @@ nav {
 
 .backtostandord {
   position: fixed;
+  border: 0;
+  background: transparent;
   bottom: 5%;
   left: 3%;
   height: 10%;
