@@ -20,7 +20,6 @@
   font-size: 22px;
 }
 .buttonstandort{
-image: url("Pins/leaf_BackToStandort.png"),;
 display: block;
 margin-left: auto;
 margin-right: auto;
@@ -28,7 +27,7 @@ position: fixed;
 bottom: 5%;
 left: 3%;
 height: 10%;
-width: 3%;
+width: 10%;
 }
 
 .button2 {
