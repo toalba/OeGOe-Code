@@ -24,11 +24,21 @@ window.addEventListener("DOMContentLoaded",function(){
 popupbutton.addEventListener("click",function(){
 document.getElementById('Popup').style.display="block";
 });
+var popdown= document.getElementById('backfilter');
+popdown.addEventListener("click",function(){
+  document.getElementById('Popup').style.display="none";
+  });
 
 var popupbuttonroute = document.getElementById('popupbuttonroute');
 popupbuttonroute.addEventListener("click",function(){
 document.getElementById('popuproute').style.display="block";
 });
+var popdownroute= document.getElementById('backroute');
+popdownroute.addEventListener("click",function(){
+  document.getElementById('popuproute').style.display="none";
+  });
+
+
 
    mymap = L.map('mapid').setView([48,14], 15);
   navigator.geolocation.getCurrentPosition(function(position) {
