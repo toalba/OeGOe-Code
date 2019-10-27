@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: white;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: mediumseagreen;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 20px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: white;
+    border-image: initial;
+<<<<<<< HEAD
+    width: 197px;
+}
+
+div {
+    background-image: url("Map2.png");
+    background-color: white;
+=======
+    width: 37%;
+>>>>>>> 81c7549885e6ba6528b84c64bf915f6554e11117
+}
+=======
 .button {
   margin: 10px;
   padding: 0 10px;
@@ -51,3 +87,4 @@ nav {
   display: flex;
   justify-content: center;
 }
+>>>>>>> 41029c147e9f255b74bae84b88ee569d11afc927
