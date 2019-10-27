@@ -29,6 +29,17 @@ left: 3%;
 height: 70px;
 width: 65px;
 border-radius: 50%;
+background-color: white;
+}
+
+.picturestandort{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  bottom: 5%;
+  left: 3%;
+  height: 10%;
 }
 
 .button2 {
