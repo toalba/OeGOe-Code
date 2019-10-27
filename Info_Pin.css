@@ -102,3 +102,4 @@ h1 {
   .button:hover {
      background-position: right center;
   }
+.zurueck:focus{outline: 0;}
