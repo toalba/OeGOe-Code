@@ -18,6 +18,7 @@ function setViewtostandort()
   };
 };
 window.addEventListener("DOMContentLoaded",function(){
+
    mymap = L.map('mapid').setView([48,14], 15);
   navigator.geolocation.getCurrentPosition(function(position) {
     do_something(position.coords.latitude, position.coords.longitude);
