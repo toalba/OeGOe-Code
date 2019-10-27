@@ -14,6 +14,8 @@
     crossorigin=""/>
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="overpass-lib.css">
+    <link rel="stylesheet" href="Filter.css">
+    <link rel="stylesheet" href="Routenplaner.css">
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script> 
@@ -24,18 +26,89 @@
 
     <nav>
         <div class="container">
-                  <a href="Filter.html"><button type="button" class="button1">
+                  <button type="button" class="button1" id="popupbutton">
                 <p><i class="fa fa-sliders" style="font-size:20px"></i> Filter</p>
-                </button></a>
-                <a href="Routenplaner.html"><button type="button" class="button2">
+                </button>
+               <button type="button" class="button2" id="popupbuttonroute">
                 <p>Routenplaner <i class="fa fa-map-signs" style="font-size:18px"></i></p>
-                </button></a>
+                </button>
             </div>
         </nav>
     <body>
         <div class="map" id="mapid">
 
         </div>  
+
+        <div id="Popup">
+             <h1>Filter</h1>
+ 
+                <form action="/action_page.php">
+                    <fieldset>         
+                            <legend><strong>Transportarten</strong></legend>
+                                 <form>
+                                     <input type="checkbox" name="Fahrrad" value="Fahrrad"> Fahrrad <br>
+                                     <input type="checkbox" name="Elektroscooter" value="Elektroscooter"> Elektroscooter <br>
+                                     <input type="checkbox" name="Zug" value="Zug"> Zug<br>
+                                    <input type="checkbox" name="Straßenbahn" value="Straßenbahn"> Straßenbahn  <br>
+                                    <input type="checkbox" name="Bus" value="Bus"> Bus  <br>
+                                </form> 
+                    </fieldset>
+                <br>
+                    <fieldset>
+                            <legend><strong>Kartenarten</strong></legend>
+                            <form>
+                                <input type="checkbox" name="Standard" value="Standard"> Standard <br>
+                               <input type="checkbox" name="Satellit" value="satellit"> Satellit  <br>
+                               <input type="checkbox" name="Terrain" value="Terrain"> Terrain
+                            </form> 
+                    </fieldset>
+                <br> 
+                  <a href="index.html"><input type="button" class="bestaetigen" value="Bestätigen"></a>
+                  <a href="index.html"><input type="button" class="zurueck" value="Zurück"></a>
+                </form>
+        </div>
+
+        <div id="popuproute">
+                <h1>Routenplaner</h1>
+
+                <form action="/action_page.php">
+                    <fieldset>
+                        <legend><strong>Route</strong></legend>
+                    Start<br>
+                    <input type="text" name="start">
+                    <br>
+                    Ziel<br>
+                    <input type="text" name="ziel">
+                    <br>
+                    </fieldset>
+                  <br>
+                    <fieldset>         
+                        <legend><strong>Zeiten</strong></legend>
+                            <form>
+                                <input type="checkbox" name="Abfahrt" value="Abfahrt"> Abfahrt
+                                <input type="checkbox" name="Ankunft" value="Anunft"> Ankunft  
+                            </form>
+                            <br> <br>
+                    <i class="fa fa-clock-o" style="font-size:22px"></i>
+                    <input type="time" name="uhrzeit">
+                    <br> <br>
+                    <i class="fa fa-calendar" style="font-size:20px"></i> 
+                    <input type="date" name="datum">
+                        <br>
+                    </fieldset>
+                <br>
+                  <fieldset>
+                        <form>
+                                <input type="checkbox" name="Fußweg" value="Fußweg"> Fußweg <br>
+                                <span id="Carsharing"><input type="checkbox" name="Carsharing" value="Carsharing"> Carsharing</span>
+                        </form>
+                  </fieldset>  
+                  <br> 
+                  <a href="index.html"><input type="button" class="bestaetigen" value="Bestätigen"></a>
+                  <a href="index.html"><input type="button" class="zurueck" value="Zurück"></a>
+                </form>
+        </div>
+
         <div>
            <button onclick="setViewtostandort()" class="buttonstandort"><img  src="Pins/leaf_BackToStandort.png" class="picturestandort"></img></button>
         </div>

@@ -20,6 +20,16 @@ function setViewtostandort()
 };
 window.addEventListener("DOMContentLoaded",function(){
 
+  var popupbutton = document.getElementById('popupbutton');
+popupbutton.addEventListener("click",function(){
+document.getElementById('Popup').style.display="block";
+});
+
+var popupbuttonroute = document.getElementById('popupbuttonroute');
+popupbuttonroute.addEventListener("click",function(){
+document.getElementById('popuproute').style.display="block";
+});
+
    mymap = L.map('mapid').setView([48,14], 15);
   navigator.geolocation.getCurrentPosition(function(position) {
     do_something(position.coords.latitude, position.coords.longitude);
