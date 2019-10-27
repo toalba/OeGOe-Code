@@ -20,25 +20,11 @@
   font-size: 22px;
 }
 .buttonstandort{
-  margin: 10px;
-  padding: 0 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color:
-  white;
-  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  box-shadow: 0 0 20px
-  #eee;
-  border-radius: 10px;
-  display: block;
-  background-size: 200% auto;
-  background-image: linear-gradient(to right,
-  mediumseagreen 0%, #61cc3b 51%,
-  mediumseagreen 100%);
-  border: 0;
-  font-size: 22px;
+background-image: url("Pins/leaf_BackToStandort.png"),;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
 }
 
 .button2 {
