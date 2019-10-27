@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 button {
     -webkit-appearance: button;
     -webkit-writing-mode: horizontal-tb !important;
@@ -32,3 +33,58 @@ div {
     width: 37%;
 >>>>>>> 81c7549885e6ba6528b84c64bf915f6554e11117
 }
+=======
+.button {
+  margin: 10px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color:
+  white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px
+  #eee;
+  border-radius: 10px;
+  display: block;
+  backround-size: 200% auto;
+  background-image: linear-gradient(to right,
+  mediumseagreen 0%, #61cc3b 51%,
+  mediumseagreen 100%);
+  border: 0;
+  min-width: 300px;
+  font-size: 22px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button:hover {
+   background-position: right center;
+}
+
+.map {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 87;
+  display: flex;
+  justify-content: center;
+}
+>>>>>>> 41029c147e9f255b74bae84b88ee569d11afc927
