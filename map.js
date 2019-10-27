@@ -8,6 +8,15 @@ var osm = new L.TileLayer(
       'attribution': [attr_osm, attr_overpass].join(', ')
   }
 );
+function setViewtostandort()
+{
+  navigator.geolocation.getCurrentPosition(function(position) {
+    do_something(position.coords.latitude, position.coords.longitude);
+  });
+  function do_something(latitude,longitude){
+    mymap.setView([latitude,longitude], 15);
+  };
+};
 window.addEventListener("DOMContentLoaded",function(){
    mymap = L.map('mapid').setView([48,14], 15);
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -50,6 +59,7 @@ function do_something(latitude,longitude){
   mymap.addLayer(createoverpasslayer('node["railway"="station"]({{bbox}});out body;>;out skel qt;','Pins/ZugmagentaPin.png',latitude,longitude));
   mymap.addLayer(createoverpasslayer('node["railway"="subway_entrance"]({{bbox}});out body;>;out skel qt;','Pins/Ubahnschwarz.png',longitude,latitude));
 
+  document.getElementById("backtostandortbutton").setViewtostandort();
 
 }
 function createoverpasslayer(query,iconUrl,latitude,longitude){
@@ -64,15 +74,7 @@ function createoverpasslayer(query,iconUrl,latitude,longitude){
 
   });
 }
-function setViewtostandort()
-{
-  navigator.geolocation.getCurrentPosition(function(position) {
-    do_something(position.coords.latitude, position.coords.longitude);
-  });
-  function do_something(latitude,longitude){
-    mymap.setView([latitude,longitude], 15);
-  };
-};
+
 
 function setonlybus()
 {
