@@ -44,7 +44,8 @@ border-color: mediumseagreen;
   left: 3%;
   height: 74px;
 }
-
+.button1:focus{outline: 0;}
+.button2:focus{outline: 0;}
 .button2 {
   margin: 10px;
   padding: 0 10px;

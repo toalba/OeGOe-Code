@@ -129,3 +129,5 @@ fieldset {
   .button:hover {
      background-position: right center;
   }
+  .zurueck:focus{outline: 0;}
+  .bestaetigen:focus{outline: 0;}

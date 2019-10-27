@@ -159,3 +159,5 @@ input[type="button" i] {
   .button:hover {
      background-position: right center;
   }
+  .bestaetigen:focus{outline: 0;}
+  .zurueck:focus{outline: 0;}
