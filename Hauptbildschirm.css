@@ -19,6 +19,26 @@
   border: 0;
   font-size: 22px;
 }
+.buttonstandort{
+  margin: 2px;
+  padding: 0 1px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 100% auto;
+  color:
+  white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px
+  #eee;
+  border-radius: 1px;
+  display: block;
+  background-size: 100% auto;
+  background-image: linear-gradient(to right,
+  mediumseagreen 0%, #61cc3b 51%,
+  mediumseagreen 100%);
+
+}
 
 .button2 {
   margin: 10px;
