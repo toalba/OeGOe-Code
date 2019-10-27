@@ -24,7 +24,11 @@ background-image: url("Pins/leaf_BackToStandort.png"),;
 display: block;
 margin-left: auto;
 margin-right: auto;
-width: 50%;
+position: fixed;
+bottom: 5%;
+left: 3%;
+height: 10%;
+width: 3%;
 }
 
 .button2 {
@@ -80,10 +84,3 @@ nav {
   justify-content: center;
 }
 
-.backtostandord {
-  position: fixed;
-  bottom: 5%;
-  left: 3%;
-  height: 10%;
-  width: 3%;
-}
