@@ -21,10 +21,14 @@ button {
     border-style: outset;
     border-color: white;
     border-image: initial;
+<<<<<<< HEAD
     width: 197px;
 }
 
 div {
     background-image: url("Map2.png");
     background-color: white;
+=======
+    width: 37%;
+>>>>>>> 81c7549885e6ba6528b84c64bf915f6554e11117
 }
