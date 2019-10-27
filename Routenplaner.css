@@ -4,10 +4,9 @@
   z-index: 10000;
   align-items: center;;
   justify-content: center;
-  top: calc(50% - 220px);
-  left: calc(50% - 700px);
+  top: calc(35% - 19%);
+  left: calc(50% - 37.5%);
   background: white;
-  height: 48%;
   width: 75%;
   border-radius: 10px;
   border-color: black;
