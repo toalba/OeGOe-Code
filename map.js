@@ -62,3 +62,12 @@ function createoverpasslayer(query,iconUrl,latitude,longitude){
 
   });
 }
+function setViewtostandort()
+{
+  navigator.geolocation.getCurrentPosition(function(position) {
+    do_something(position.coords.latitude, position.coords.longitude);
+  });
+  function do_something(latitude,longitude){
+    mymap.setView([latitude,longitude], 15);
+  };
+};
