@@ -29,8 +29,9 @@ left: 3%;
 height: 70px;
 width: 65px;
 border-radius: 50%;
-background-color: white;
+background-color: transparent;
 text-decoration: none;
+border-color: mediumseagreen;
 }
 
 .buttonstandort:focus{outline: 0;}
@@ -41,8 +42,7 @@ text-decoration: none;
   position: fixed;
   bottom: 5%;
   left: 3%;
-  height: 70px;
-  border-radius: 50%;
+  height: 74px;
 }
 
 .button2 {
