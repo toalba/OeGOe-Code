@@ -1,3 +1,4 @@
+
 var mymap;
 var attr_osm = 'Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors';
 var attr_overpass = 'POI via <a href="http://www.overpass-api.de/">Overpass API</a>';
