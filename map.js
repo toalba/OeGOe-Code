@@ -50,6 +50,15 @@ function do_something(latitude,longitude){
   mymap.addLayer(createoverpasslayer('node["railway"="station"]({{bbox}});out body;>;out skel qt;','Pins/ZugmagentaPin.png',latitude,longitude));
   mymap.addLayer(createoverpasslayer('node["railway"="subway_entrance"]({{bbox}});out body;>;out skel qt;','Pins/Ubahnschwarz.png',longitude,latitude));
 }
+function setviewtostandort()
+{
+  navigator.geolocation.getCurrentPosition(function(position) {
+    do_something(position.coords.latitude, position.coords.longitude);
+  });
+  function do_something(latitude,longitude){
+    mymap.setView([latitude,longitude], 15);
+  };
+}
 function createoverpasslayer(query,iconUrl,latitude,longitude){
   return new L.OverPassLayer({
     minZoom: 15,
