@@ -78,7 +78,7 @@ function do_something(latitude,longitude){
 
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["bus"="yes"]({{bbox}}); node["highway"="bus_stop"]({{bbox}});out body;>;out skel qt;','Pins/BusseroterPin.png',latitude,longitude));
   mymap.addLayer(createoverpasslayer('node["public_transport"="stop_position"]["tram"="yes"]({{bbox}});out body;>;out skel qt;','Pins/StrassenbahnorangerPin.png',latitude,longitude));
-  mymap.addLayer(createoverpasslayer('node["railway"="station"]({{bbox}});out body;>;out skel qt;','Pins/ZugmagentaPin.png',latitude,longitude));
+  mymap.addLayer(createoverpasslayer('node["railway"="station"]({{bbox}}); node["railway"="halt"]({{bbox}});out body;>;out skel qt;','Pins/ZugmagentaPin.png',latitude,longitude));
   mymap.addLayer(createoverpasslayer('node["railway"="subway_entrance"]({{bbox}});out body;>;out skel qt;','Pins/Ubahnschwarz.png',longitude,latitude));
 
 
