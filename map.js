@@ -47,7 +47,7 @@ popdownroute.addEventListener("click",function(){
 });
 function do_something(latitude,longitude){
   mymap.setView([latitude,longitude], 15);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> Datenquelle: CC-BY-4.0: <a href="data.linz.gv.at">"Stadt Linz - data.linz.gv.at"'}).addTo(mymap);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> Datenquelle: CC-BY-4.0: <a href="data.linz.gv.at">Stadt Linz - data.linz.gv.at'}).addTo(mymap);
   var stblatt = L.icon({
     iconUrl: 'Pins/greenleavest.png',
     iconSize: [30, 93.3],
